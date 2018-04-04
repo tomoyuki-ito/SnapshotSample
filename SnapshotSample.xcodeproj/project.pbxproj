@@ -14,6 +14,7 @@
 		DC7565AA20749BBD00872BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7565A820749BBD00872BF2 /* LaunchScreen.storyboard */; };
 		DC7565B520749BBE00872BF2 /* SnapshotSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565B420749BBE00872BF2 /* SnapshotSampleTests.swift */; };
 		DC7565C020749BBE00872BF2 /* SnapshotSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565BF20749BBE00872BF2 /* SnapshotSampleUITests.swift */; };
+		DC7565CE20749DC300872BF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565CD20749DC300872BF2 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DC7565BB20749BBE00872BF2 /* SnapshotSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7565BF20749BBE00872BF2 /* SnapshotSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotSampleUITests.swift; sourceTree = "<group>"; };
 		DC7565C120749BBE00872BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7565CD20749DC300872BF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		DC7565BE20749BBE00872BF2 /* SnapshotSampleUITests */ = {
 			isa = PBXGroup;
 			children = (
+				DC7565CD20749DC300872BF2 /* SnapshotHelper.swift */,
 				DC7565BF20749BBE00872BF2 /* SnapshotSampleUITests.swift */,
 				DC7565C120749BBE00872BF2 /* Info.plist */,
 			);
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7565C020749BBE00872BF2 /* SnapshotSampleUITests.swift in Sources */,
+				DC7565CE20749DC300872BF2 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
