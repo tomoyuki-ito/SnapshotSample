@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  FeatureCoordinator.swift
 //  SnapshotSample
 //
 //  Created by Tomoyuki Ito on 2018/04/04.
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class HomeCoordinator: NavigationCoordinator {
+class FeatureCoordinator: Coordinator {
     
-    let navigationController = UINavigationController()
-    let rootViewController: UIViewController
-    let featureCoordinator = FeatureCoordinator()
+    var mainViewController: UIViewController?
     
     init() {
         let stackView = UIStackView()
@@ -23,12 +21,12 @@ class HomeCoordinator: NavigationCoordinator {
         stackView.isUserInteractionEnabled = true
         
         let label = UILabel()
-        label.text = "ホーム"
+        label.text = "特集"
         label.textAlignment = .center
         stackView.addArrangedSubview(label)
         
         let button = UIButton()
-        button.setTitle("特集へ", for: .normal)
+        button.setTitle("詳細へ", for: .normal)
         stackView.addArrangedSubview(button)
         
         let view = UIView()
@@ -37,17 +35,21 @@ class HomeCoordinator: NavigationCoordinator {
         stackView.frame = view.bounds
         view.addSubview(stackView)
         
-        rootViewController = InjectionViewController(view: view)
-        navigationController.tabBarItem = UITabBarItem(title: label.text, image: nil, tag: 0)
+        mainViewController = InjectionViewController(view: view)
         
-        button.addTarget(self, action: #selector(pushFeature), for: .touchUpInside)
+        button.addTarget(self, action: #selector(pushDetail), for: .touchUpInside)
     }
-
-    @objc func pushFeature() {
-        featureCoordinator.start()
-        if let vc = featureCoordinator.mainViewController {
-            navigationController.pushViewController(vc, animated: true)
-        }
+    
+    func start() {
+    }
+    
+    @objc func pushDetail() {
+        let label = UILabel()
+        label.backgroundColor = .lightGray
+        label.text = "詳細"
+        label.textAlignment = .center
+        let viewController = InjectionViewController(view: label)
+        mainViewController?.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

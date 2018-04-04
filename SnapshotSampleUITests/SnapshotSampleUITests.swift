@@ -35,7 +35,11 @@ class SnapshotSampleUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let app = XCUIApplication()
         app.buttons["ホーム"].tap()
-        snapshot("0_home")
+        snapshot("00_home")
+        app.buttons["特集へ"].tap()
+        snapshot("01_feature")
+        app.buttons["詳細へ"].tap()
+        snapshot("02_comicdetail")
         app.buttons["連載"].tap()
         snapshot("1_serial")
         app.buttons["人気"].tap()

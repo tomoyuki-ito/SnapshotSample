@@ -13,7 +13,14 @@ class ApplicationCoordinator: Coordinator {
     var mainViewController: UIViewController? { return self.window.rootViewController }
 
     let window: UIWindow
-    
+    let coordinators: [Coordinator] = [
+        HomeCoordinator(),
+        SerialCoordinator(),
+        PopularCoordinator(),
+        MagazineCoordinator(),
+        SettingCoordinator()
+    ]
+
     init(window: UIWindow) {
         self.window = window
     }
@@ -24,13 +31,6 @@ class ApplicationCoordinator: Coordinator {
     }
 
     private func createRootViewController() -> UIViewController {
-        let coordinators: [Coordinator] = [
-            HomeCoordinator(),
-            SerialCoordinator(),
-            PopularCoordinator(),
-            MagazineCoordinator(),
-            SettingCoordinator()
-        ]
         coordinators.forEach { $0.start() }
         let viewControllers: [UIViewController] = coordinators.flatMap { $0.mainViewController }
         
