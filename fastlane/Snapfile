@@ -10,6 +10,7 @@ languages([
 ])
 
 concurrent_simulators false
+clear_previous_screenshots true
 
 # The name of the scheme which contains the UI Tests
 # scheme "SchemeName"

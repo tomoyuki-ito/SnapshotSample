@@ -33,7 +33,17 @@ class SnapshotSampleUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        snapshot("0Launch")
+        let app = XCUIApplication()
+        app.buttons["ホーム"].tap()
+        snapshot("0_home")
+        app.buttons["連載"].tap()
+        snapshot("1_serial")
+        app.buttons["人気"].tap()
+        snapshot("2_popular")
+        app.buttons["雑誌"].tap()
+        snapshot("3_magazine")
+        app.buttons["設定"].tap()
+        snapshot("4_setting")
     }
     
 }

@@ -15,6 +15,14 @@
 		DC7565B520749BBE00872BF2 /* SnapshotSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565B420749BBE00872BF2 /* SnapshotSampleTests.swift */; };
 		DC7565C020749BBE00872BF2 /* SnapshotSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565BF20749BBE00872BF2 /* SnapshotSampleUITests.swift */; };
 		DC7565CE20749DC300872BF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565CD20749DC300872BF2 /* SnapshotHelper.swift */; };
+		DC7565D12074A8CB00872BF2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565D02074A8CB00872BF2 /* Coordinator.swift */; };
+		DC7565D32074A8DD00872BF2 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565D22074A8DD00872BF2 /* ApplicationCoordinator.swift */; };
+		DC7565D62074AEED00872BF2 /* InjectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565D52074AEED00872BF2 /* InjectionViewController.swift */; };
+		DC7565D82074BB6E00872BF2 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565D72074BB6E00872BF2 /* HomeCoordinator.swift */; };
+		DC7565DA2074BB8800872BF2 /* SerialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565D92074BB8800872BF2 /* SerialCoordinator.swift */; };
+		DC7565DC2074BB9C00872BF2 /* PopularCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565DB2074BB9C00872BF2 /* PopularCoordinator.swift */; };
+		DC7565DE2074BBB000872BF2 /* MagazineCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */; };
+		DC7565E02074BBC300872BF2 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		DC7565BF20749BBE00872BF2 /* SnapshotSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotSampleUITests.swift; sourceTree = "<group>"; };
 		DC7565C120749BBE00872BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC7565CD20749DC300872BF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		DC7565D02074A8CB00872BF2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DC7565D22074A8DD00872BF2 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		DC7565D52074AEED00872BF2 /* InjectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionViewController.swift; sourceTree = "<group>"; };
+		DC7565D72074BB6E00872BF2 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		DC7565D92074BB8800872BF2 /* SerialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialCoordinator.swift; sourceTree = "<group>"; };
+		DC7565DB2074BB9C00872BF2 /* PopularCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoordinator.swift; sourceTree = "<group>"; };
+		DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCoordinator.swift; sourceTree = "<group>"; };
+		DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,8 @@
 		DC75659E20749BBD00872BF2 /* SnapshotSample */ = {
 			isa = PBXGroup;
 			children = (
+				DC7565D42074AC5A00872BF2 /* ViewController */,
+				DC7565CF2074A88100872BF2 /* Coordinator */,
 				DC75659F20749BBD00872BF2 /* AppDelegate.swift */,
 				DC7565A120749BBD00872BF2 /* ViewController.swift */,
 				DC7565A320749BBD00872BF2 /* Main.storyboard */,
@@ -126,6 +144,28 @@
 				DC7565C120749BBE00872BF2 /* Info.plist */,
 			);
 			path = SnapshotSampleUITests;
+			sourceTree = "<group>";
+		};
+		DC7565CF2074A88100872BF2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DC7565D02074A8CB00872BF2 /* Coordinator.swift */,
+				DC7565D22074A8DD00872BF2 /* ApplicationCoordinator.swift */,
+				DC7565D72074BB6E00872BF2 /* HomeCoordinator.swift */,
+				DC7565D92074BB8800872BF2 /* SerialCoordinator.swift */,
+				DC7565DB2074BB9C00872BF2 /* PopularCoordinator.swift */,
+				DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */,
+				DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DC7565D42074AC5A00872BF2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC7565D52074AEED00872BF2 /* InjectionViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +302,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7565DA2074BB8800872BF2 /* SerialCoordinator.swift in Sources */,
 				DC7565A220749BBD00872BF2 /* ViewController.swift in Sources */,
+				DC7565DC2074BB9C00872BF2 /* PopularCoordinator.swift in Sources */,
+				DC7565D62074AEED00872BF2 /* InjectionViewController.swift in Sources */,
 				DC7565A020749BBD00872BF2 /* AppDelegate.swift in Sources */,
+				DC7565D12074A8CB00872BF2 /* Coordinator.swift in Sources */,
+				DC7565DE2074BBB000872BF2 /* MagazineCoordinator.swift in Sources */,
+				DC7565E02074BBC300872BF2 /* SettingCoordinator.swift in Sources */,
+				DC7565D32074A8DD00872BF2 /* ApplicationCoordinator.swift in Sources */,
+				DC7565D82074BB6E00872BF2 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
