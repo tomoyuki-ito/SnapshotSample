@@ -24,6 +24,7 @@
 		DC7565DE2074BBB000872BF2 /* MagazineCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */; };
 		DC7565E02074BBC300872BF2 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */; };
 		DC7565E22074E11C00872BF2 /* FeatureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565E12074E11C00872BF2 /* FeatureCoordinator.swift */; };
+		DC7565E42075BF0100872BF2 /* BuyTicketCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565E32075BF0100872BF2 /* BuyTicketCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineCoordinator.swift; sourceTree = "<group>"; };
 		DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		DC7565E12074E11C00872BF2 /* FeatureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCoordinator.swift; sourceTree = "<group>"; };
+		DC7565E32075BF0100872BF2 /* BuyTicketCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				DC7565DB2074BB9C00872BF2 /* PopularCoordinator.swift */,
 				DC7565DD2074BBB000872BF2 /* MagazineCoordinator.swift */,
 				DC7565DF2074BBC300872BF2 /* SettingCoordinator.swift */,
+				DC7565E32075BF0100872BF2 /* BuyTicketCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				DC7565D62074AEED00872BF2 /* InjectionViewController.swift in Sources */,
 				DC7565A020749BBD00872BF2 /* AppDelegate.swift in Sources */,
 				DC7565D12074A8CB00872BF2 /* Coordinator.swift in Sources */,
+				DC7565E42075BF0100872BF2 /* BuyTicketCoordinator.swift in Sources */,
 				DC7565DE2074BBB000872BF2 /* MagazineCoordinator.swift in Sources */,
 				DC7565E02074BBC300872BF2 /* SettingCoordinator.swift in Sources */,
 				DC7565D32074A8DD00872BF2 /* ApplicationCoordinator.swift in Sources */,
