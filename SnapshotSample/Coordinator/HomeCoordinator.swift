@@ -11,10 +11,21 @@ import UIKit
 class HomeCoordinator: NavigationCoordinator {
     
     let navigationController = UINavigationController()
-    let rootViewController: UIViewController
+    lazy var rootViewController: UIViewController = self.createHomeViewController()
     let featureCoordinator = FeatureCoordinator()
     
     init() {
+        navigationController.tabBarItem = UITabBarItem(title: "ホーム", image: nil, tag: 0)
+    }
+
+    @objc func pushFeature() {
+        featureCoordinator.start()
+        if let vc = featureCoordinator.mainViewController {
+            navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    private func createHomeViewController() -> UIViewController {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -29,6 +40,7 @@ class HomeCoordinator: NavigationCoordinator {
         
         let button = UIButton()
         button.setTitle("特集へ", for: .normal)
+        button.addTarget(self, action: #selector(pushFeature), for: .touchUpInside)
         stackView.addArrangedSubview(button)
         
         let view = UIView()
@@ -37,17 +49,7 @@ class HomeCoordinator: NavigationCoordinator {
         stackView.frame = view.bounds
         view.addSubview(stackView)
         
-        rootViewController = InjectionViewController(view: view)
-        navigationController.tabBarItem = UITabBarItem(title: label.text, image: nil, tag: 0)
-        
-        button.addTarget(self, action: #selector(pushFeature), for: .touchUpInside)
-    }
-
-    @objc func pushFeature() {
-        featureCoordinator.start()
-        if let vc = featureCoordinator.mainViewController {
-            navigationController.pushViewController(vc, animated: true)
-        }
+        return InjectionViewController(view: view)
     }
     
 }

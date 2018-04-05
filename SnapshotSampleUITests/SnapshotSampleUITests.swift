@@ -41,13 +41,17 @@ class SnapshotSampleUITests: XCTestCase {
         app.buttons["詳細へ"].tap()
         snapshot("02_comicdetail")
         app.buttons["連載"].tap()
-        snapshot("1_serial")
+        snapshot("10_serial")
         app.buttons["人気"].tap()
-        snapshot("2_popular")
+        snapshot("20_popular")
+        app.buttons["ランキングへ"].tap()
+        snapshot("21_ranking")
         app.buttons["雑誌"].tap()
-        snapshot("3_magazine")
+        snapshot("30_magazine")
         app.buttons["設定"].tap()
-        snapshot("4_setting")
+        snapshot("40_setting")
+        app.buttons["コイン履歴へ"].tap()
+        snapshot("41_coinhistory")
     }
     
 }

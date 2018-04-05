@@ -11,15 +11,46 @@ import UIKit
 class SettingCoordinator: NavigationCoordinator {
     
     let navigationController = UINavigationController()
-    let rootViewController: UIViewController
+    lazy var rootViewController: UIViewController = self.createSettingViewController()
 
     init() {
+        navigationController.tabBarItem = UITabBarItem(title: "設定", image: nil, tag: 0)
+    }
+    
+    @objc func pushCoinHistory() {
         let label = UILabel()
         label.backgroundColor = .lightGray
+        label.text = "コイン履歴"
+        label.textAlignment = .center
+        let vc = InjectionViewController(view: label)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    private func createSettingViewController() -> UIViewController {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 0
+        stackView.isUserInteractionEnabled = true
+        
+        let label = UILabel()
         label.text = "設定"
         label.textAlignment = .center
-        rootViewController = InjectionViewController(view: label)
-        navigationController.tabBarItem = UITabBarItem(title: label.text, image: nil, tag: 0)
+        stackView.addArrangedSubview(label)
+        
+        let button = UIButton()
+        button.setTitle("コイン履歴へ", for: .normal)
+        button.addTarget(self, action: #selector(pushCoinHistory), for: .touchUpInside)
+        stackView.addArrangedSubview(button)
+        
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        stackView.frame = view.bounds
+        view.addSubview(stackView)
+        
+        return InjectionViewController(view: view)
     }
     
 }
