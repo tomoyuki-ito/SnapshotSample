@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DC7565A020749BBD00872BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75659F20749BBD00872BF2 /* AppDelegate.swift */; };
-		DC7565A220749BBD00872BF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565A120749BBD00872BF2 /* ViewController.swift */; };
-		DC7565A520749BBD00872BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7565A320749BBD00872BF2 /* Main.storyboard */; };
 		DC7565A720749BBD00872BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7565A620749BBD00872BF2 /* Assets.xcassets */; };
 		DC7565AA20749BBD00872BF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7565A820749BBD00872BF2 /* LaunchScreen.storyboard */; };
 		DC7565B520749BBE00872BF2 /* SnapshotSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7565B420749BBE00872BF2 /* SnapshotSampleTests.swift */; };
@@ -47,8 +45,6 @@
 /* Begin PBXFileReference section */
 		DC75659C20749BBD00872BF2 /* SnapshotSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapshotSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC75659F20749BBD00872BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC7565A120749BBD00872BF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC7565A420749BBD00872BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC7565A620749BBD00872BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC7565A920749BBD00872BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC7565AB20749BBD00872BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 				DC7565D42074AC5A00872BF2 /* ViewController */,
 				DC7565CF2074A88100872BF2 /* Coordinator */,
 				DC75659F20749BBD00872BF2 /* AppDelegate.swift */,
-				DC7565A120749BBD00872BF2 /* ViewController.swift */,
-				DC7565A320749BBD00872BF2 /* Main.storyboard */,
 				DC7565A620749BBD00872BF2 /* Assets.xcassets */,
 				DC7565A820749BBD00872BF2 /* LaunchScreen.storyboard */,
 				DC7565AB20749BBD00872BF2 /* Info.plist */,
@@ -283,7 +277,6 @@
 			files = (
 				DC7565AA20749BBD00872BF2 /* LaunchScreen.storyboard in Resources */,
 				DC7565A720749BBD00872BF2 /* Assets.xcassets in Resources */,
-				DC7565A520749BBD00872BF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7565DA2074BB8800872BF2 /* SerialCoordinator.swift in Sources */,
-				DC7565A220749BBD00872BF2 /* ViewController.swift in Sources */,
 				DC7565E22074E11C00872BF2 /* FeatureCoordinator.swift in Sources */,
 				DC7565DC2074BB9C00872BF2 /* PopularCoordinator.swift in Sources */,
 				DC7565D62074AEED00872BF2 /* InjectionViewController.swift in Sources */,
@@ -356,14 +348,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DC7565A320749BBD00872BF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC7565A420749BBD00872BF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC7565A820749BBD00872BF2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -572,6 +556,109 @@
 			};
 			name = Release;
 		};
+		DC7565E720761B5B00872BF2 /* UITest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = UITest;
+		};
+		DC7565E820761B5B00872BF2 /* UITest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapshotSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D UITEST";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coroco3.SnapshotSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = UITest;
+		};
+		DC7565E920761B5B00872BF2 /* UITest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapshotSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coroco3.SnapshotSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SnapshotSample.app/SnapshotSample";
+			};
+			name = UITest;
+		};
+		DC7565EA20761B5B00872BF2 /* UITest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SnapshotSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coroco3.SnapshotSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SnapshotSample;
+			};
+			name = UITest;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +666,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC7565C220749BBE00872BF2 /* Debug */,
+				DC7565E720761B5B00872BF2 /* UITest */,
 				DC7565C320749BBE00872BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -588,6 +676,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC7565C520749BBE00872BF2 /* Debug */,
+				DC7565E820761B5B00872BF2 /* UITest */,
 				DC7565C620749BBE00872BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -597,6 +686,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC7565C820749BBE00872BF2 /* Debug */,
+				DC7565E920761B5B00872BF2 /* UITest */,
 				DC7565C920749BBE00872BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -606,6 +696,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC7565CB20749BBE00872BF2 /* Debug */,
+				DC7565EA20761B5B00872BF2 /* UITest */,
 				DC7565CC20749BBE00872BF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
