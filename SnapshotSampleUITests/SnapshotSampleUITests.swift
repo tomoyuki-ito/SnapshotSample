@@ -52,6 +52,13 @@ class SnapshotSampleUITests: XCTestCase {
         snapshot("40_setting")
         app.buttons["コイン履歴へ"].tap()
         snapshot("41_coinhistory")
+        app.buttons["雑誌"].tap()
+        app.buttons["チケット購入へ"].tap()
+        snapshot("50_buyticket")
+        app.buttons["コイン購入へ"].tap()
+        snapshot("51_cointicket")
+        app.buttons["Back"].tap()
+        app.buttons["閉じる"].tap()
     }
     
 }

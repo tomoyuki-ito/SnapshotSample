@@ -14,6 +14,8 @@ class BuyTicketCoordinator: NavigationCoordinator {
     lazy var rootViewController: UIViewController = self.createBuyTicketViewController()
     
     init() {
+        let barButtonItem = UIBarButtonItem(title: "閉じる", style: .plain, target: self, action: #selector(close))
+        rootViewController.navigationItem.setLeftBarButton(barButtonItem, animated: false)
     }
     
     @objc func pushBuyCoin() {
@@ -23,6 +25,10 @@ class BuyTicketCoordinator: NavigationCoordinator {
         label.textAlignment = .center
         let vc = InjectionViewController(view: label)
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    @objc func close() {
+        self.mainViewController?.dismiss(animated: true, completion: nil)
     }
     
     private func createBuyTicketViewController() -> UIViewController {
