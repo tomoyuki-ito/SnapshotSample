@@ -26,30 +26,15 @@ class BuyTicketCoordinator: NavigationCoordinator {
     }
     
     private func createBuyTicketViewController() -> UIViewController {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.distribution = .fillEqually
-        stackView.spacing = 0
-        stackView.isUserInteractionEnabled = true
-        
         let label = UILabel()
         label.text = "チケット購入"
         label.textAlignment = .center
-        stackView.addArrangedSubview(label)
         
         let button = UIButton()
         button.setTitle("コイン購入へ", for: .normal)
         button.addTarget(self, action: #selector(pushBuyCoin), for: .touchUpInside)
-        stackView.addArrangedSubview(button)
         
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        stackView.frame = view.bounds
-        view.addSubview(stackView)
-        
-        return InjectionViewController(view: view)
+        return InjectionViewController(views: [label, button])
     }
     
 }

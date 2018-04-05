@@ -17,6 +17,11 @@ public class InjectionViewController: UIViewController {
         injection = view
     }
     
+    public convenience init(views: [UIView]) {
+        self.init(nibName: nil, bundle: nil)
+        injection = stacking(views: views)
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -31,4 +36,21 @@ public class InjectionViewController: UIViewController {
         }
     }
     
+    private func stacking(views: [UIView]) -> UIView {
+        let stackView = UIStackView(arrangedSubviews: views)
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 0
+        stackView.isUserInteractionEnabled = true
+
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        stackView.frame = view.bounds
+        view.addSubview(stackView)
+
+        return view
+    }
+
 }

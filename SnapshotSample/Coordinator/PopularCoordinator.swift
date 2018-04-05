@@ -27,30 +27,15 @@ class PopularCoordinator: NavigationCoordinator {
     }
     
     private func createPopularViewController() -> UIViewController {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.distribution = .fillEqually
-        stackView.spacing = 0
-        stackView.isUserInteractionEnabled = true
-        
         let label = UILabel()
         label.text = "人気"
         label.textAlignment = .center
-        stackView.addArrangedSubview(label)
         
         let button = UIButton()
         button.setTitle("ランキングへ", for: .normal)
         button.addTarget(self, action: #selector(pushRanking), for: .touchUpInside)
-        stackView.addArrangedSubview(button)
         
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        stackView.frame = view.bounds
-        view.addSubview(stackView)
-        
-        return InjectionViewController(view: view)
+        return InjectionViewController(views: [label, button])
     }
     
 }
