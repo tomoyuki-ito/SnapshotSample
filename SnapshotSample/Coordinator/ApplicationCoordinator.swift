@@ -26,11 +26,29 @@ class ApplicationCoordinator: Coordinator {
     }
     
     func start() {
-        self.window.rootViewController = createRootViewController()
+        self.window.rootViewController = createTutorialViewController()
         self.window.makeKeyAndVisible()
     }
 
-    private func createRootViewController() -> UIViewController {
+    private func createTutorialViewController() -> UIViewController {
+        let label = UILabel()
+        label.text = "チュートリアル"
+        label.textAlignment = .center
+        
+        let button = UIButton()
+        button.setTitle("Topへ", for: .normal)
+        button.addTarget(self, action: #selector(changeRootToTabs), for: .touchUpInside)
+        
+        let vc = InjectionViewController(views: [label, button])
+        return vc
+    }
+    
+    @objc func changeRootToTabs() {
+        let vc = createTabBarController()
+        window.rootViewController = vc
+    }
+
+    private func createTabBarController() -> UIViewController {
         coordinators.forEach { $0.start() }
         let viewControllers: [UIViewController] = coordinators.flatMap { $0.mainViewController }
         
