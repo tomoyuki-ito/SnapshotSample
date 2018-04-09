@@ -40,6 +40,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DC75659B20749BBD00872BF2"
+            BuildableName = "SnapshotSample.app"
+            BlueprintName = "SnapshotSample"
+            ReferencedContainer = "container:SnapshotSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -54,15 +63,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC7565BA20749BBE00872BF2"
-            BuildableName = "SnapshotSampleUITests.xctest"
-            BlueprintName = "SnapshotSampleUITests"
+            BlueprintIdentifier = "DC75659B20749BBD00872BF2"
+            BuildableName = "SnapshotSample.app"
+            BlueprintName = "SnapshotSample"
             ReferencedContainer = "container:SnapshotSample.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -72,15 +82,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DC7565BA20749BBE00872BF2"
-            BuildableName = "SnapshotSampleUITests.xctest"
-            BlueprintName = "SnapshotSampleUITests"
-            ReferencedContainer = "container:SnapshotSample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
