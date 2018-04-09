@@ -1,20 +1,14 @@
-matrix:
-  include:
+osx_image: xcode9.2
+language: swift
 
-    - language: swift
-      osx_image: xcode9.2
+install:
+  - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+  - npm install -g firebase-tools
 
-      install:
-        - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
+script:
+  - bundle exec fastlane snapshot
 
-      script:
-        - bundle exec fastlane snapshot
-
-    - language: node_js
-      install:
-        - npm install -g firebase-tools
-
-      after_success:
-        - cp fastlane/screenshots/screenshots.html public/index.html
-        - cp -r fastlane/screenshots/ja-JP public/ja-JP
-        - firebase deploy --token $FIREBASE_TOKEN
+after_success:
+  - cp fastlane/screenshots/screenshots.html public/index.html
+  - cp -r fastlane/screenshots/ja-JP public/ja-JP
+  - firebase deploy --token $FIREBASE_TOKEN
