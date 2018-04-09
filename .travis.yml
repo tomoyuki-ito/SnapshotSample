@@ -10,5 +10,5 @@ script:
 
 after_success:
   - cp fastlane/screenshots/screenshots.html public/index.html
-  - cp -r fastlane/screenshots/ja-JP public/ja-JP
+  - cp -r fastlane/screenshots/ja-JP public
   - firebase deploy --token $FIREBASE_TOKEN
