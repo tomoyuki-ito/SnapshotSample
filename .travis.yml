@@ -9,6 +9,6 @@ script:
   - bundle exec fastlane snapshot
 
 after_success:
-  - cp fastlane/screenshots/screenshots.html public/index.html
+  - cp fastlane/screenshots/screenshots.html functions/templates/index.html
   - cp -r fastlane/screenshots/ja-JP public
   - firebase deploy --token $FIREBASE_TOKEN
