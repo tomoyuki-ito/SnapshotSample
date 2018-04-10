@@ -11,12 +11,7 @@ install:
 
 deploy:
   - provider: script
-    script:
-      - bundle exec fastlane snapshot
-      - cp fastlane/screenshots/screenshots.html functions/templates/index.html
-      - cp -r fastlane/screenshots/ja-JP public
-      - cd functions && npm i && cd ..
-      - firebase deploy --token $FIREBASE_TOKEN
+    script: ./firebase_deploy.sh
     skip_cleanup: true
     on:
       all_branches: true
