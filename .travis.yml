@@ -7,7 +7,6 @@ branches:
 
 install:
   - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/bundle}
-  - npm install -g firebase-tools
 
 deploy:
   - provider: script
